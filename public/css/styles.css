@@ -1,0 +1,186 @@
+@font-face {
+    font-family: 'JetBrains';
+    src: url(JetBrainsMono-VariableFont_wght.ttf);
+}
+
+body {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+    width: 100vw;
+    color: yellow;
+}
+
+.button {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(186, 186, 17);
+    padding: 20px 30px;
+    font-size: 20px;
+    transition: background-color 0.5s;
+    font-family: 'JetBrains';
+    transition: 500ms;
+    transform: translateY(0);
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.button:hover {
+    background-color: rgb(163, 163, 28);
+    transition: 0.5s;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'JetBrains';
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    height: 50%; 
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mcq-question {
+    text-align: center;
+}
+
+.question {
+    font-size: 24px; /* Increase question text size */
+    margin-bottom: 20px;
+    max-width: 700px;
+    display: inline-block;
+    text-align: center;
+    font-family: 'JetBrains';
+
+     /* Add spacing below question */
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+}
+
+.option-button {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(186, 186, 17);
+    padding: 20px 30px;
+    font-size: 20px;
+    transition: background-color 0.5s;
+    font-family: 'JetBrains';
+    transition: 500ms;
+    transform: translateY(0);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.option-button:hover {
+    background-color: rgb(163, 163, 28);
+    transition: 0.5s;
+}
+
+img {
+    width: 30px;
+}
+
+.yourScore {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    border: black 1px solid;
+    box-shadow: 2px 2px rgb(186, 186, 17);
+    padding: 20px 30px;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-family: 'JetBrains';
+    text-align: center;
+}
+
+.opponentScore {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    border: black 1px solid;
+    box-shadow: 2px 2px rgb(186, 186, 17);
+    padding: 20px 30px;
+    align-items: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 100%;
+    font-family: 'JetBrains';
+    text-align: center;
+}
+
+.scoresandtimer{
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results{
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    border: black 1px solid;
+    box-shadow: 2px 2px rgb(186, 186, 17);
+    padding: 20px 30px;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 30px;
+    font-family: 'JetBrains';
+}
+.goHome {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(186, 186, 17);
+    padding: 20px 30px;
+    font-size: 20px;
+    transition: background-color 0.5s;
+    font-family: 'JetBrains';
+    transition: 500ms;
+    transform: translateY(0);
+    margin-bottom: 10px;
+    width: fit-content;
+
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.goHome:hover {
+    background-color: rgb(163, 163, 28);
+    transition: 0.5s;
+}

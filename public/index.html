@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriviaBrawls</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    
+</head>
+<body>
+    <main>
+
+        <div id= "scoresandtimer" class="scoresandtimer">
+            <div id="yourScore" class="yourScore"></div>
+            <div id="opponentScore" class="opponentScore"></div>
+        </div>
+
+
+        <div id ="main-content"class="main-content">
+            <h1 id = "title">TriviaBrawls</h1>
+
+            <button id="playButton" class="button">Play</button>
+
+            <p id="waitingForPlayers"></p>
+            <img src = "loading.gif" id="loading" class = "loading" alt = " "></img> 
+        </div>
+
+        <div id = "questioncontainer" class="container">
+            <!--<div id="yourScore" class="yourScore"></div>-->
+            <div id = "mcq-question" class="mcq-question">
+                <div id="question" class="question"></div>
+                <div id = "options" class="options"></div>
+            </div>
+            <!--div id="opponentScore" class="opponentScore"></div>-->  
+        </div>
+
+        <div id = "results" class="results">
+        </div>
+        
+        <button onClick= "window.location.reload();" id="backToHome" class="goHome">Back to Home</button>
+        
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"></script>
+    <script src="./js/client.js"></script>
+</body>
+</html>

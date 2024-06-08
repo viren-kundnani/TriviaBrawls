@@ -1,0 +1,25 @@
+{
+  "name": "exambrawls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "delegate-it": "^6.1.0",
+    "express": "^4.19.2",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1",
+    "opencollective-postinstall": "^2.0.3",
+    "path-to-regexp": "^6.2.2",
+    "socket.io": "^4.7.5",
+    "swup": "^4.6.1",
+    "typed-query-selector": "^2.11.2",
+    "uuid": "^9.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
