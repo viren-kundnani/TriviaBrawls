@@ -1,2 +1,2 @@
 # TriviaBrawls
-Deploying my first full stack app to Heroku.
+My first full stack app.
