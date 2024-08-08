@@ -3,6 +3,7 @@ const socketIo = require('socket.io');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
+require('dotenv').config();
 
 const app = express();
 const http = require('http');
@@ -26,8 +27,7 @@ server.listen(port, () => {
     console.log(`Server is running on ${port}`);
 });
 
-// Replace <password> with your actual password
-const uri = 'mongodb+srv://virenkundnani:m6RR80U1pDg5cbuC@cluster0.aaqagx0.mongodb.net/quizGame?retryWrites=true&w=majority&appName=Cluster0';
+const uri = process.env.MONGODB_URI;
 mongoose.connect(uri, {serverSelectionTimeoutMS: 5000, socketTimeoutMS: 45000 })
 .then(() => console.log('MongoDB Atlas connection successful'))
 .catch(err => console.error('MongoDB Atlas connection error:', err));
