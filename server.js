@@ -5,7 +5,7 @@ const cors = require('cors');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
-const http = require('http').Server(app);
+const http = require('http');
 const server = http.createServer(app);
 const io = socketIo(server, {
     cors: {
@@ -21,14 +21,14 @@ app.get('/', (req, res) => {
     res.sendFile('./public/index.html');
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 server.listen(port, () => {
     console.log(`Server is running on ${port}`);
 });
 
 // Replace <password> with your actual password
-const uri = 'mongodb+srv://virenkundnani:m6RR80U1pDg5cbuC@cluster0.aaqagx0.mongodb.net/quizGame?retryWrites=true&w=majority';
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+const uri = 'mongodb+srv://virenkundnani:m6RR80U1pDg5cbuC@cluster0.aaqagx0.mongodb.net/quizGame?retryWrites=true&w=majority&appName=Cluster0';
+mongoose.connect(uri, {serverSelectionTimeoutMS: 5000, socketTimeoutMS: 45000 })
 .then(() => console.log('MongoDB Atlas connection successful'))
 .catch(err => console.error('MongoDB Atlas connection error:', err));
 const questionSchema = new mongoose.Schema({
@@ -160,7 +160,6 @@ io.on('connection', (socket) => {
         }
     });
 });
-
 
 
 
